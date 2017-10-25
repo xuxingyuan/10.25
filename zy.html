@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+$(function(){
+  $.ajax({
+  	url:"http://localhost:3000/",
+  	type:"POST",
+  	data:{abc:1},
+  	success:function(e){
+  		for(var i=0;i<e.length;i++){
+  			for(var x=0;x<e[i].length;x++){
+  				 $('body').append('<p>'+e[i][x]+'</p>')
+  		}
+  			}
+       
+
+  		
+
+  	}
+  })
+
+})
+</script>
